@@ -1,5 +1,5 @@
-import { Collapse, Text, Avatar } from "@nextui-org/react";
-import { Job } from "./Job";
+import { Collapse, Text, Avatar } from '@nextui-org/react';
+import { Job } from './Job';
 
 export const CollapseContainer = ({ props }) => {
 	const { days, instructors } = props;
@@ -14,9 +14,7 @@ export const CollapseContainer = ({ props }) => {
 						key={_id}
 						title={<Text h3>{`${instructor.name}`}</Text>}
 						subtitle={`${day}: ${date}`}
-						contentLeft={
-							<Avatar size="lg" src={`/avatar/${instructor.avatar}`} color={state ? "success" : "error"} bordered squared />
-						}
+						contentLeft={<Avatar size="lg" src={`/avatar/${instructor.avatar}`} color={state ? 'success' : 'error'} bordered squared />}
 					>
 						<h4>{instructor.class} </h4>
 						<Text>{instructor.transversal}</Text>
