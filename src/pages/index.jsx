@@ -1,7 +1,7 @@
-import { getAllData } from "@/api";
-import { CollapseContainer } from "@/components/collapse";
-import { Container, Grid } from "@nextui-org/react";
-import Head from "next/head";
+import { getAllData } from '@/api';
+import { CollapseContainer } from '@/components/collapse';
+import { Container, Grid } from '@nextui-org/react';
+import Head from 'next/head';
 
 export default function Home({ props }) {
 	return (
@@ -11,9 +11,9 @@ export default function Home({ props }) {
 			</Head>
 
 			<Container lg>
-				<Grid.Container gap={1} css={{ justifyContent: "center" }}>
+				<Grid.Container gap={1} css={{ justifyContent: 'center' }}>
 					<Grid>
-						<h1 style={{ textAlign: "center" }}>Informacion</h1>
+						<h1 style={{ textAlign: 'center' }}>Informacion</h1>
 
 						<CollapseContainer props={props} />
 					</Grid>
@@ -23,7 +23,7 @@ export default function Home({ props }) {
 	);
 }
 
-export const getStaticProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
 	return {
 		props: {
 			props: await getAllData(),
